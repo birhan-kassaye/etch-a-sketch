@@ -1,8 +1,6 @@
 body {
 }
 #container {
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -10,9 +8,9 @@ body {
 .grid-Item {
     border: 2px solid red;
     width: 50px;
-    height: 50px;
-
+    aspect-ratio: 1/1; /*Ensures square diamension*/
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
