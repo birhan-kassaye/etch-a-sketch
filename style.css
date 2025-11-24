@@ -1,26 +1,21 @@
-body {
-}
 
 #container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
 }
 
-.div-raw {
-}
-/*
-.grid-column {
+.grid-item {
     border: 2px solid red;
     width: 50px;
-    aspect-ratio: 1/1; Ensures square diamension
+    aspect-ratio: 1/1; /*Ensures square diamension*/
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: 10px;
 }
-*/
+
 .grid-item2:hover {
     background-color: blue;
-    color: white;
+    border-color: black;
 }

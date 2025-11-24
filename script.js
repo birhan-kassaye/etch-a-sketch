@@ -28,11 +28,11 @@ document.addEventListener("DOMContentLoaded", ()=> {
             //Create the grid cells
         for(let i=0; i<newGridnum; i++){
             const divRaw = document.createElement("div");
-            divRaw.classList.add("grid-raw");
             for(let j=0; j<newGridnum; j++){
                 const div = document.createElement("div");
-                div.textContent = `Raw${i+1} Column${j+1}`;
-                div.classList.add("grid-column");
+                //div.textContent = `Raw${i+1} Column${j+1}`;
+                div.classList.add("grid-item");
+                div.classList.add("grid-item2")
 
                 divRaw.append(div);
             }
