@@ -1,16 +1,26 @@
 body {
 }
+
 #container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
-.grid-Item {
+
+.div-raw {
+}
+/*
+.grid-column {
     border: 2px solid red;
     width: 50px;
-    aspect-ratio: 1/1; /*Ensures square diamension*/
+    aspect-ratio: 1/1; Ensures square diamension
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+*/
+.grid-item2:hover {
+    background-color: blue;
+    color: white;
 }
