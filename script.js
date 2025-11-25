@@ -1,22 +1,6 @@
-//const container = document.getElementById("container"); //Accessing the div container from script.js file
-/*
-function getGrid() {
-        const numGrid = prompt("Enter the number of Grid: ");
-    for(let i=0; i<numGrid; i++){
-        for(j=0; j<numGrid; j++){
-            const gridItem = document.createElement("div"); // The div created using javascript
-            gridItem.textContent = `Raw${i+1} Column${j+1}`;
-            gridItem.classList.add("grid-Item"); //Adding a class inside the div element
-            gridItem.classList.add("grid-Item2"); //Adding a second new class in a div
-            container.append(gridItem);
-        }
-    }
-}
-*/
-
 document.addEventListener("DOMContentLoaded", ()=> {
     const container = document.getElementById("container");
-    const button = document.getElementById("button");
+    const button = document.getElementById("gridButton");
 
     button.addEventListener('click', ()=> {
         container.innerHTML = '';
@@ -26,20 +10,22 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
         if (newGridnum >= 1 && newGridnum <= 100){
             //Create the grid cells
-        for(let i=0; i<newGridnum; i++){
-            const divRaw = document.createElement("div");
-            for(let j=0; j<newGridnum; j++){
-                const div = document.createElement("div");
-                //div.textContent = `Raw${i+1} Column${j+1}`;
-                div.classList.add("grid-item");
-                div.classList.add("grid-item2")
+            for(let i=0; i<newGridnum*newGridnum; i++){
+                    const div = document.createElement("div");
+                    div.classList.add("grid-item");
 
-                divRaw.append(div);
-            }
-            container.append(divRaw);
-        }
-        //Removes the button after it gets clicked
-        button.remove();
+                    container.append(div);
+                }
+            //Remove the button after creation
+            button.remove();
+
+            const gridSquares = document.querySelectorAll(".grid-item");
+            gridSquares.forEach(square =>{
+                square.addEventListener('mouseover', ()=>{
+                    const randomColor = 'rgb(${Math.random()*255}, ${Math.random()*255}, ${Math.random()*255})';
+                    square.style.backgroundColor = randomColor;
+                })
+            })
         }else{
             alert("Please enter a number between 1-100");
         }

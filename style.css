@@ -2,20 +2,18 @@
 #container {
     display: flex;
     flex-wrap: wrap;
+    gap: 2px;
 }
 
 .grid-item {
-    border: 2px solid red;
+    border: 1px solid red;
     width: 50px;
     aspect-ratio: 1/1; /*Ensures square diamension*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 10px;
+    background-color: white;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
 }
 
-.grid-item2:hover {
+.grid-item:hover {
     background-color: blue;
-    border-color: black;
 }
