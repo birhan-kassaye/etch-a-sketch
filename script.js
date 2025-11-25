@@ -18,12 +18,14 @@ document.addEventListener("DOMContentLoaded", ()=> {
                 }
             //Remove the button after creation
             button.remove();
-
+            
             const gridSquares = document.querySelectorAll(".grid-item");
             gridSquares.forEach(square =>{
                 square.addEventListener('mouseover', ()=>{
-                    const randomColor = 'rgb(${Math.random()*255}, ${Math.random()*255}, ${Math.random()*255})';
-                    square.style.backgroundColor = randomColor;
+                    const r=Math.floor(Math.random()*256);
+                    const g=Math.floor(Math.random()*256);
+                    const b=Math.floor(Math.random()*256);
+                    square.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
                 })
             })
         }else{
